@@ -1,6 +1,6 @@
 package dictionaryconsole.enums;
 
-public enum DictionaryImpl {
+public enum DictionaryType {
     LATIN,
     NUMBER
 }

@@ -8,6 +8,7 @@ public class Helper {
     public static void writeMessage(String message) {
         System.out.println(message);
     }
+
     public static String readMessage() throws IOException {
         return reader.readLine();
     }

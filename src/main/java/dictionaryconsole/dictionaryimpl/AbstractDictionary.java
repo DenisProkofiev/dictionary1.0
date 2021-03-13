@@ -13,7 +13,7 @@ import java.util.Map;
 import java.util.stream.Stream;
 
 public abstract class AbstractDictionary implements Dictionary {
-    private  Map<String, String> mainMap = new HashMap<>();
+    private Map<String, String> mainMap = new HashMap<>();
     private Path fileSource;
     private String delimiter = ":";
 
@@ -100,7 +100,7 @@ public abstract class AbstractDictionary implements Dictionary {
 
     @Override
     public boolean removePair(String key) {
-        if(!mainMap.containsKey(key)) {
+        if (!mainMap.containsKey(key)) {
             Helper.writeMessage("The key is not contained in map");
             return false;
         }
@@ -114,7 +114,7 @@ public abstract class AbstractDictionary implements Dictionary {
                 e.printStackTrace();
             }
         } while (!answer.equalsIgnoreCase("y") && !answer.equalsIgnoreCase("n"));
-        if(!mainMap.containsKey(key)) {
+        if (!mainMap.containsKey(key)) {
 
         }
         if (answer.equalsIgnoreCase("y")) {

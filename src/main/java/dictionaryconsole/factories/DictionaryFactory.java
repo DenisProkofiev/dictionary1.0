@@ -2,14 +2,11 @@ package dictionaryconsole.factories;
 
 import dictionaryconsole.dictionaryimpl.LatinRealization;
 import dictionaryconsole.dictionaryimpl.NumericRealization;
-import dictionaryconsole.enums.DictionaryImpl;
+import dictionaryconsole.enums.DictionaryType;
 import dictionaryconsole.interfaces.Dictionary;
 
-import java.nio.file.Path;
-import java.nio.file.Paths;
-
 public class DictionaryFactory {
-    public static Dictionary createDictionary(String path, DictionaryImpl implementation) {
+    public static Dictionary createDictionary(String path, DictionaryType implementation) {
         Dictionary dictionary = null;
 
         switch (implementation) {
