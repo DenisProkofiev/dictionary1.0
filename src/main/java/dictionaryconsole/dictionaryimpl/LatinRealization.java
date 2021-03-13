@@ -14,10 +14,10 @@ public class LatinRealization extends AbstractDictionary {
     }
 
     @Override
-    public boolean dictionaryMatches(String keyCheck, String valueCheck, int keyLength, int valueLength) {
+    public boolean dictionaryMatches(String keyCheck, int keyLength) {
 
-        if (keyLength == KEY_AND_VALUE_SIZE && valueLength == KEY_AND_VALUE_SIZE) {
-            if (keyCheck.matches(LATIN_PATTERN) && valueCheck.matches(LATIN_PATTERN)) {
+        if (keyLength == KEY_AND_VALUE_SIZE) {
+            if (keyCheck.matches(LATIN_PATTERN)) {
                 return true;
             } else {
                 try {

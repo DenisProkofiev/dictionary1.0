@@ -14,10 +14,10 @@ public class NumericRealization extends AbstractDictionary {
     }
 
     @Override
-    public boolean dictionaryMatches(String keyCheck, String valueCheck, int keyLength, int valueLength) {
+    public boolean dictionaryMatches(String keyCheck, int keyLength) {
 
-        if (keyLength == KEY_AND_VALUE_SIZE && valueLength == KEY_AND_VALUE_SIZE) {
-            if (keyCheck.matches(NUMBER_PATTERN) && valueCheck.matches(NUMBER_PATTERN)) {
+        if (keyLength == KEY_AND_VALUE_SIZE) {
+            if (keyCheck.matches(NUMBER_PATTERN)) {
                 return true;
             } else {
                 try {

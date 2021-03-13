@@ -56,11 +56,11 @@ public abstract class AbstractDictionary implements Dictionary {
         return strings;
     }
 
-    public abstract boolean dictionaryMatches(String keyCheck, String valueCheck, int keyLength, int valueLength);
+    public abstract boolean dictionaryMatches(String keyCheck, int keyLength);
 
     @Override
     public boolean addPair(String key, String value) {
-        if (dictionaryMatches(key, value, key.length(), value.length())) {
+        if (dictionaryMatches(key, key.length())) {
             mainMap.put(key, value);
             updateMainMap();
             return true;
